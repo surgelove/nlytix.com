@@ -19,7 +19,7 @@ const combinations = [
     {
         image: 'nlytix_jello.png',
         frameColor: '#C63F1F',  // Red
-        motto: 'Teams gel when data needs thicken and set',
+        motto: 'Engineering teams gel when business data needs thicken and set',
         mottoColor: '#F3EFEC',  // Light cream
         backgroundColor: '#EC752F',  // Dark orange
         menuColor: '#C63F1F'  // Same as frame color
