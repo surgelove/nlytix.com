@@ -47,6 +47,14 @@ const combinations = [
         mottoColor: '#CB3A23',  // Light salmon
         backgroundColor: '#F0C643',  // Dark orange-brown
         menuColor: '#306FC5'  // Same as frame color
+    },
+    {
+        image: 'nlytix_daycare.png',
+        frameColor: '#E58D35',  // Orange
+        motto: 'Data Science environments are a lot like a daycare, they require constant attention and nurturing to thrive.',
+        mottoColor: '#E5B642',  // Light salmon
+        backgroundColor: '#3C88B1',  // Dark orange-brown
+        menuColor: '#E58D35'  // Same as frame color
     }
 ];
 
@@ -72,6 +80,14 @@ class RandomBag {
             this.refillBag();
         }
         return this.bag.pop();
+    }
+
+    // Remove a specific item from the current bag
+    removeItem(item) {
+        const index = this.bag.findIndex(bagItem => bagItem === item);
+        if (index !== -1) {
+            this.bag.splice(index, 1);
+        }
     }
 }
 
@@ -281,9 +297,12 @@ function updateContent() {
     }, 500);
 }
 
-// Initialize with random combination on page load
+// Initialize with gold combination on page load
 function initializeContent() {
-    const combination = combinationBag.draw(); // Use random combination
+    const combination = combinations[0]; // Always start with gold (first combination)
+    
+    // Remove the gold combination from the current bag so it won't appear until next refill
+    combinationBag.removeItem(combination);
     
     // Set initial content without transitions
     imageElement.src = combination.image;
