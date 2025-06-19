@@ -48,7 +48,7 @@ body {
 
 .menu-content {
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.4);
     color: white;
     padding: 0;
     max-height: 0;
@@ -57,14 +57,40 @@ body {
 }
 
 .menu-content.active {
-    max-height: 400px;
+    max-height: 1000px; /* Large enough to accommodate any content */
     padding: 30px;
 }
 
+#menuText {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#menuText h2 {
+    margin-bottom: 1px;
+    font-size: 24px;
+}
+
+#menuText p {
+    margin-bottom: 5px;
+}
+
+/* Rainbow animation keyframes */
+@keyframes rainbow {
+    0% { color: #ff0000; }
+    16.66% { color: #ff8000; }
+    33.33% { color: #ffff00; }
+    50% { color: #00ff00; }
+    66.66% { color: #0080ff; }
+    83.33% { color: #8000ff; }
+    100% { color: #ff0000; }
+}
+
 .menu-content a {
-    color: inherit;
     text-decoration: none;
     font-weight: bold;
+    animation: rainbow 3s linear infinite;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .menu-content a:hover {
@@ -72,7 +98,7 @@ body {
 }
 
 .menu-content p:has(a) {
-    text-align: center;
+    text-align: left;
 }
 
 /* Main content styles */
@@ -191,5 +217,9 @@ body {
     .tagline {
         max-width: 250px;
         font-size: 16px;
+    }
+    
+    .menu-content img[src="Aia.png"] {
+        display: none;
     }
 }

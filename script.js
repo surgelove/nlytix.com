@@ -86,18 +86,23 @@ let countdownElement, menuBarElement, menuContentElement, menuTextElement;
 const menuContents = {
     about: `
         <h2>About nlytix</h2>
-        <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights.<br/>We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
+        <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights. We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
         <p><a href="https://linkedin.com/in/nlytix" target="_blank">Visit my LinkedIn profile</a></p>
     `,
     aia: `
-        <h2>Aia</h2>
-        <p>Aia is an AI-powered trading assistante who specializes in profitable automated trading.<br/>She analyzes market instruments by profiling stocks, studying historical patterns, and continuously optimizing her trading algorithms and strategies to maximize returns.</p>
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+            <img src="Aia.png" alt="Aia" style="max-width: 150px; height: auto; flex-shrink: 0;">
+            <div style="flex: 1;">
+                <h2>Aia</h2>
+                <p>Aia is an AI-powered trading assistante who specializes in profitable automated trading. She analyzes market instruments by profiling stocks, studying historical patterns, and continuously optimizing her trading algorithms and strategies to maximize returns.</p>
+            </div>
+        </div>
     `,
     blog: `
         <h2>Blog & Insights</h2>
-        <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.</p>
-        <p>Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
-        <p><a href="#" onclick="return false;">Visit our blog</a> (coming soon)</p>
+        <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.
+        Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
+        <p><a href="#" onclick="return false;">Visit our blog</a></p>
     `,
     hectomega: `
         <h2>hectomega</h2>
@@ -121,8 +126,50 @@ function toggleMenu(menuType) {
 
 function openMenu(menuType) {
     activeMenu = menuType;
-    menuTextElement.innerHTML = menuContents[menuType];
-    menuContentElement.classList.add('active');
+    
+    // If menu is already open, temporarily shrink it for smooth transition
+    if (menuContentElement.classList.contains('active')) {
+        menuContentElement.style.maxHeight = '0px';
+        menuContentElement.style.padding = '0px';
+        
+        setTimeout(() => {
+            // Update content and styling
+            menuTextElement.innerHTML = menuContents[menuType];
+            
+            // Special styling for AIA menu
+            if (menuType === 'aia') {
+                menuContentElement.style.background = 'rgba(255, 255, 255, 0.9)';
+                menuContentElement.style.color = '#333';
+            } else {
+                menuContentElement.style.background = 'rgba(0, 0, 0, 0.8)';
+                menuContentElement.style.color = 'white';
+            }
+            
+            // Calculate content height and expand
+            const contentHeight = menuTextElement.scrollHeight + 60; // Add padding
+            menuContentElement.style.maxHeight = Math.max(contentHeight, 200) + 'px';
+            menuContentElement.style.padding = '30px';
+        }, 250); // Half of the transition duration
+    } else {
+        // First time opening - show content immediately
+        menuTextElement.innerHTML = menuContents[menuType];
+        menuContentElement.classList.add('active');
+        
+        // Special styling for AIA menu
+        if (menuType === 'aia') {
+            menuContentElement.style.background = 'rgba(255, 255, 255, 0.9)';
+            menuContentElement.style.color = '#333';
+        } else {
+            menuContentElement.style.background = 'rgba(0, 0, 0, 0.8)';
+            menuContentElement.style.color = 'white';
+        }
+        
+        // Set dynamic height
+        setTimeout(() => {
+            const contentHeight = menuTextElement.scrollHeight + 60;
+            menuContentElement.style.maxHeight = Math.max(contentHeight, 200) + 'px';
+        }, 10);
+    }
     
     // Update active menu item
     document.querySelectorAll('.menu-item').forEach(item => {
@@ -134,6 +181,9 @@ function openMenu(menuType) {
 function closeMenu() {
     activeMenu = null;
     menuContentElement.classList.remove('active');
+    // Reset to CSS-controlled sizing
+    menuContentElement.style.maxHeight = '';
+    menuContentElement.style.padding = '';
     document.querySelectorAll('.menu-item').forEach(item => {
         item.classList.remove('active');
     });
