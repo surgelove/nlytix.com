@@ -57,8 +57,22 @@ body {
 }
 
 .menu-content.active {
-    max-height: 400px;
+    max-height: 1000px; /* Large enough to accommodate any content */
     padding: 30px;
+}
+
+#menuText {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#menuText h2 {
+    margin-bottom: 1px;
+    font-size: 24px;
+}
+
+#menuText p {
+    margin-bottom: 5px;
 }
 
 /* Rainbow animation keyframes */
