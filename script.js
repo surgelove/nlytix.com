@@ -86,17 +86,18 @@ let countdownElement, menuBarElement, menuContentElement, menuTextElement;
 const menuContents = {
     about: `
         <h2>About nlytix</h2>
-        <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights. We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
+        <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights.<br/>We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
+        <p><a href="https://linkedin.com/in/nlytix" target="_blank">Visit my LinkedIn profile</a></p>
     `,
     aia: `
         <h2>Aia</h2>
-        <p>Aia is an AI-powered trading assistante who specializes in profitable automated trading. She analyzes market instruments by profiling stocks, studying historical patterns, and continuously optimizing her trading algorithms and strategies to maximize returns.</p>
+        <p>Aia is an AI-powered trading assistante who specializes in profitable automated trading.<br/>She analyzes market instruments by profiling stocks, studying historical patterns, and continuously optimizing her trading algorithms and strategies to maximize returns.</p>
     `,
     blog: `
         <h2>Blog & Insights</h2>
         <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.</p>
         <p>Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
-        <p><a href="#" onclick="return false;">Visit our blog</a></p>
+        <p><a href="#" onclick="return false;">Visit our blog</a> (coming soon)</p>
     `,
     hectomega: `
         <h2>hectomega</h2>
