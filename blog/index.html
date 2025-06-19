@@ -92,6 +92,41 @@
         .back-link a:hover {
             text-decoration: underline;
         }
+        
+        .image-gallery {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #D4AF37;
+        }
+        
+        .image-gallery h3 {
+            color: #D1B566;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .image-grid img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #D4AF37;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .image-grid img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -120,6 +155,19 @@
                 <p>Delve into the revolutionary impact of artificial intelligence on industries worldwide. From machine learning algorithms to neural networks, understand how AI is transforming business processes and creating new opportunities.</p>
                 <div class="blog-meta">Published: AI Innovations • 6 min read</div>
             </article>
+        </div>
+        
+        <div class="image-gallery">
+            <h3>Gallery</h3>
+            <div class="image-grid">
+                <img src="../nlytix_daycare.png" alt="Nlytix Daycare">
+                <img src="../nlytix_flowers.png" alt="Nlytix Flowers">
+                <img src="../nlytix_glass.png" alt="Nlytix Glass">
+                <img src="../nlytix_gold.png" alt="Nlytix Gold">
+                <img src="../nlytix_jello.png" alt="Nlytix Jello">
+                <img src="../nlytix_paint.png" alt="Nlytix Paint">
+                <img src="../nlytix_wood.png" alt="Nlytix Wood">
+            </div>
         </div>
     </div>
 </body>
