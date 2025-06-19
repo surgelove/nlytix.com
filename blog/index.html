@@ -12,38 +12,6 @@
             padding: 40px 20px;
         }
         
-        .png-gallery {
-            display: flex;
-            flex-wrap: nowrap;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 40px;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 8px;
-            border: 1px solid #D4AF37;
-            overflow-x: auto;
-        }
-        
-        .png-square {
-            width: calc(100vw / 9);
-            max-width: 120px;
-            min-width: 60px;
-            height: calc(100vw / 9);
-            max-height: 120px;
-            min-height: 60px;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #D4AF37;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .png-square:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.5);
-        }
-        
         .blog-header {
             text-align: center;
             margin-bottom: 50px;
@@ -129,16 +97,6 @@
 <body>
     
     <div class="blog-container">
-        <div class="png-gallery">
-            <img src="../nlytix_gold.png" alt="Gold" class="png-square">
-            <img src="../nlytix_flowers.png" alt="Flowers" class="png-square">
-            <img src="../nlytix_jello.png" alt="Jello" class="png-square">
-            <img src="../nlytix_glass.png" alt="Glass" class="png-square">
-            <img src="../nlytix_wood.png" alt="Wood" class="png-square">
-            <img src="../nlytix_paint.png" alt="Paint" class="png-square">
-            <img src="../nlytix_daycare.png" alt="Daycare" class="png-square">
-        </div>
-        
         <div class="blog-header">
             <h1>nlytix Blog</h1>
             <p>Insights on Data, Analytics & AI</p>
