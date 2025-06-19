@@ -85,7 +85,7 @@ let countdownElement, menuBarElement, menuContentElement, menuTextElement;
 // Menu content data
 const menuContents = {
     about: `
-        <h2>About nlytix</h2>
+        <h2>About nlytix inc.</h2>
         <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights. We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
         <p><a href="https://linkedin.com/in/nlytix" target="_blank">Visit my LinkedIn profile</a></p>
     `,
