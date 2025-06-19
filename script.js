@@ -1,0 +1,252 @@
+// Predefined combinations - each image has its own frame color and motto
+const combinations = [
+    {
+        image: 'nlytix_gold.png',
+        frameColor: '#AF833D',  // Gold
+        motto: 'Separating the data gold from the visualization glitter',
+        mottoColor: '#D1B566',  // Bright gold
+        backgroundColor: '#2C1810',  // Dark brown
+        menuColor: '#AF833D'  // Same as frame color
+    },
+    {
+        image: 'nlytix_flowers.png',
+        frameColor: '#47601B',  // Blue
+        motto: 'Chaos becomes beauty when data needs are refined and expertly addressed',
+        mottoColor: '#F3CF46',  // Sky blue
+        backgroundColor: '#0F1419',  // Dark blue-gray
+        menuColor: '#47601B'  // Same as frame color
+    },
+    {
+        image: 'nlytix_jello.png',
+        frameColor: '#C63F1F',  // Red
+        motto: 'Teams gel when data needs thicken and set',
+        mottoColor: '#F3EFEC',  // Light cream
+        backgroundColor: '#EC752F',  // Dark orange
+        menuColor: '#C63F1F'  // Same as frame color
+    },
+    {
+        image: 'nlytix_glass.png',
+        frameColor: '#ED8B43',  // Green
+        motto: 'The sun always shines on data',
+        mottoColor: '#7CB598',  // Pale green
+        backgroundColor: '#0F1A0F',  // Dark green
+        menuColor: '#ED8B43'  // Same as frame color
+    },
+    {
+        image: 'nlytix_wood.png',
+        frameColor: '#8B4513',  // dark brown
+        motto: "Woodn't it be nice if data grew on trees? Then we woodn't have to mine for it!",
+        mottoColor: '#8B4513',  // brown
+        backgroundColor: '#F5F5DC',  // beige-brown
+        menuColor: '#8B4513'  // Same as frame color
+    },
+    {
+        image: 'nlytix_paint.png',
+        frameColor: '#306FC5',  // Orange
+        motto: 'The correlation between finger painting skills and data literacy is still under investigation!',
+        mottoColor: '#CB3A23',  // Light salmon
+        backgroundColor: '#F0C643',  // Dark orange-brown
+        menuColor: '#306FC5'  // Same as frame color
+    }
+];
+
+// Bag implementation for random selection without immediate repetition
+class RandomBag {
+    constructor(items) {
+        this.originalItems = [...items];
+        this.bag = [];
+        this.refillBag();
+    }
+
+    refillBag() {
+        this.bag = [...this.originalItems];
+        // Shuffle the bag
+        for (let i = this.bag.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [this.bag[i], this.bag[j]] = [this.bag[j], this.bag[i]];
+        }
+    }
+
+    draw() {
+        if (this.bag.length === 0) {
+            this.refillBag();
+        }
+        return this.bag.pop();
+    }
+}
+
+// Create bag for combinations
+const combinationBag = new RandomBag(combinations);
+
+// DOM elements
+let imageElement, taglineElement, frameElement, containerElement, bodyElement;
+let countdownElement, menuBarElement, menuContentElement, menuTextElement;
+
+// Menu content data
+const menuContents = {
+    info: `
+        <h2>About Nlytix</h2>
+        <p>Nlytix specializes in transforming raw data into actionable insights through advanced analytics and visualization techniques. Our expertise spans across multiple industries, helping organizations make data-driven decisions.</p>
+        <p>We believe that data is the new gold, and our mission is to help you separate the valuable insights from the noise.</p>
+    `,
+    aia: `
+        <h2>AI & Analytics</h2>
+        <p>Our AI-powered analytics platform combines machine learning algorithms with traditional statistical methods to deliver comprehensive data solutions.</p>
+        <p>Services include predictive modeling, natural language processing, computer vision, and automated reporting systems.</p>
+    `,
+    blog: `
+        <h2>Blog & Insights</h2>
+        <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.</p>
+        <p>Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
+    `,
+    hectomega: `
+        <h2>Hectomega Solutions</h2>
+        <p>Our enterprise-grade platform designed for large-scale data processing and analysis. Hectomega handles massive datasets with ease and provides real-time insights.</p>
+        <p>Features include distributed computing, advanced visualization, and collaborative analytics workspaces.</p>
+    `
+};
+
+// Menu functionality
+let activeMenu = null;
+
+function toggleMenu(menuType) {
+    if (activeMenu === menuType) {
+        // Close the menu
+        closeMenu();
+    } else {
+        // Open or switch menu
+        openMenu(menuType);
+    }
+}
+
+function openMenu(menuType) {
+    activeMenu = menuType;
+    menuTextElement.innerHTML = menuContents[menuType];
+    menuContentElement.classList.add('active');
+    
+    // Update active menu item
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('active');
+    });
+    document.querySelector(`[data-menu="${menuType}"]`).classList.add('active');
+}
+
+function closeMenu() {
+    activeMenu = null;
+    menuContentElement.classList.remove('active');
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.classList.remove('active');
+    });
+}
+
+// Initialize DOM elements and event listeners
+function initializeApp() {
+    // Get DOM elements
+    imageElement = document.getElementById('mainImage');
+    taglineElement = document.getElementById('taglineText');
+    frameElement = document.querySelector('.golden-frame');
+    containerElement = document.querySelector('.image-container');
+    bodyElement = document.body;
+    countdownElement = document.getElementById('countdown');
+    menuBarElement = document.getElementById('menuBar');
+    menuContentElement = document.getElementById('menuContent');
+    menuTextElement = document.getElementById('menuText');
+
+    // Add menu event listeners
+    document.querySelectorAll('.menu-item').forEach(item => {
+        item.addEventListener('click', () => {
+            const menuType = item.getAttribute('data-menu');
+            toggleMenu(menuType);
+        });
+    });
+
+    // Add click event listener to the image container
+    containerElement.addEventListener('click', function() {
+        window.open('https://linkedin.com/in/nlytix', '_blank');
+    });
+
+    // Initialize content
+    initializeContent();
+
+    // Start the rotation after initial load
+    setTimeout(() => {
+        updateContent();
+        // Continue updating every 12 seconds
+        setInterval(updateContent, 12000);
+    }, 12000); // Wait 12 seconds before first change
+}
+
+// Countdown functionality
+let countdownInterval;
+let timeRemaining = 10;
+
+function startCountdown() {
+    timeRemaining = 10;
+    countdownElement.textContent = timeRemaining;
+    
+    countdownInterval = setInterval(() => {
+        timeRemaining--;
+        countdownElement.textContent = timeRemaining;
+        
+        if (timeRemaining <= 0) {
+            clearInterval(countdownInterval);
+        }
+    }, 1000);
+}
+
+function updateContent() {
+    // Clear existing countdown
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
+
+    // Get random combination from bag
+    const combination = combinationBag.draw();
+
+    // Start background and menu color transition first
+    bodyElement.style.backgroundColor = combination.backgroundColor;
+    menuBarElement.style.backgroundColor = combination.menuColor;
+
+    // Update image with slower fade effect
+    imageElement.style.opacity = '0';
+    
+    setTimeout(() => {
+        imageElement.src = combination.image;
+        // Wait a bit more for the image to load before fading in
+        setTimeout(() => {
+            imageElement.style.opacity = '1';
+            // Start countdown after image appears
+            startCountdown();
+        }, 100);
+    }, 1000); // Increased delay to 1 second
+
+    // Update frame colors with delay to sync with image
+    setTimeout(() => {
+        frameElement.style.borderColor = combination.frameColor;
+        containerElement.style.backgroundColor = combination.frameColor;
+
+        // Update tagline text and color
+        taglineElement.textContent = combination.motto;
+        taglineElement.style.color = combination.mottoColor;
+    }, 500);
+}
+
+// Initialize with random combination on page load
+function initializeContent() {
+    const combination = combinationBag.draw(); // Use random combination
+    
+    // Set initial content without transitions
+    imageElement.src = combination.image;
+    frameElement.style.borderColor = combination.frameColor;
+    containerElement.style.backgroundColor = combination.frameColor;
+    taglineElement.textContent = combination.motto;
+    taglineElement.style.color = combination.mottoColor;
+    bodyElement.style.backgroundColor = combination.backgroundColor;
+    menuBarElement.style.backgroundColor = combination.menuColor;
+    
+    // Start initial countdown
+    startCountdown();
+}
+
+// Initialize the app when DOM is loaded
+document.addEventListener('DOMContentLoaded', initializeApp);
