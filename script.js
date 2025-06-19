@@ -102,7 +102,7 @@ const menuContents = {
         <h2>Blog & Insights</h2>
         <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.
         Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
-        <p><a href="#" onclick="return false;">Visit our blog</a> (coming soon)</p>
+        <p><a href="#" onclick="return false;">Visit our blog</a></p>
     `,
     hectomega: `
         <h2>hectomega</h2>
