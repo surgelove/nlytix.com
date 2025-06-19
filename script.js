@@ -84,7 +84,7 @@ let countdownElement, menuBarElement, menuContentElement, menuTextElement;
 
 // Menu content data
 const menuContents = {
-    info: `
+    about: `
         <h2>About Nlytix</h2>
         <p>Nlytix specializes in transforming raw data into actionable insights through advanced analytics and visualization techniques. Our expertise spans across multiple industries, helping organizations make data-driven decisions.</p>
         <p>We believe that data is the new gold, and our mission is to help you separate the valuable insights from the noise.</p>
@@ -162,7 +162,7 @@ function initializeApp() {
 
     // Add click event listener to the image container
     containerElement.addEventListener('click', function() {
-        window.open('https://linkedin.com/in/nlytix', '_blank');
+        toggleMenu('about');
     });
 
     // Initialize content
