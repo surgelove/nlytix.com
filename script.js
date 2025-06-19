@@ -85,24 +85,23 @@ let countdownElement, menuBarElement, menuContentElement, menuTextElement;
 // Menu content data
 const menuContents = {
     about: `
-        <h2>About Nlytix</h2>
-        <p>Nlytix specializes in transforming raw data into actionable insights through advanced analytics and visualization techniques. Our expertise spans across multiple industries, helping organizations make data-driven decisions.</p>
-        <p>We believe that data is the new gold, and our mission is to help you separate the valuable insights from the noise.</p>
+        <h2>About nlytix</h2>
+        <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights. We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
     `,
     aia: `
-        <h2>AI & Analytics</h2>
-        <p>Our AI-powered analytics platform combines machine learning algorithms with traditional statistical methods to deliver comprehensive data solutions.</p>
-        <p>Services include predictive modeling, natural language processing, computer vision, and automated reporting systems.</p>
+        <h2>Aia</h2>
+        <p>Aia is an AI-powered trading assistante who specializes in profitable automated trading. She analyzes market instruments by profiling stocks, studying historical patterns, and continuously optimizing her trading algorithms and strategies to maximize returns.</p>
     `,
     blog: `
         <h2>Blog & Insights</h2>
         <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.</p>
         <p>Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
+        <p><a href="#" onclick="return false;">Visit our blog</a></p>
     `,
     hectomega: `
-        <h2>Hectomega Solutions</h2>
-        <p>Our enterprise-grade platform designed for large-scale data processing and analysis. Hectomega handles massive datasets with ease and provides real-time insights.</p>
-        <p>Features include distributed computing, advanced visualization, and collaborative analytics workspaces.</p>
+        <h2>hectomega</h2>
+        <p>Hectomega is an ambitious trading challenge that proves small investments can yield extraordinary returns through disciplined strategy and compound growth. Starting with just $100, we systematically trade and reinvest all profits with one goal: reaching $1 million. Powered by Aia, our AI powered trading assistante.</p>
+        <p><a href="https://hectomega.com" target="_blank">Visit hectomega</a></p>
     `
 };
 
