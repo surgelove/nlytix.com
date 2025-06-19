@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nlytix - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .blog-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .blog-header h1 {
+            color: #D1B566;
+            font-size: 36px;
+            margin-bottom: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .blog-header p {
+            color: #ccc;
+            font-size: 18px;
+            font-style: italic;
+        }
+        
+        .blog-posts {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .blog-post {
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-post:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+        
+        .blog-post h2 {
+            color: #D1B566;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .blog-post h2 a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        .blog-post h2 a:hover {
+            text-decoration: underline;
+        }
+        
+        .blog-post p {
+            color: #fff;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .blog-meta {
+            color: #999;
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .back-link a {
+            color: #D1B566;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="menu-item">
+            <a href="../index.html" style="color: white; text-decoration: none;">← Back to Home</a>
+        </div>
+    </div>
+    
+    <div class="blog-container">
+        <div class="blog-header">
+            <h1>nlytix Blog</h1>
+            <p>Insights on Data, Analytics & AI</p>
+        </div>
+        
+        <div class="blog-posts">
+            <article class="blog-post">
+                <h2><a href="data-fundamentals.html">The Foundation of Modern Data Science</a></h2>
+                <p>Explore the fundamental principles that underpin effective data science practices. From data collection and cleaning to establishing robust data pipelines, learn how to build a solid foundation for all your analytical endeavors.</p>
+                <div class="blog-meta">Published: Data Foundations • 5 min read</div>
+            </article>
+            
+            <article class="blog-post">
+                <h2><a href="analytics-insights.html">Transforming Numbers into Business Intelligence</a></h2>
+                <p>Discover how advanced analytics transforms raw data into actionable business insights. Learn about statistical methods, visualization techniques, and interpretation strategies that drive informed decision-making across organizations.</p>
+                <div class="blog-meta">Published: Analytics Deep-dive • 7 min read</div>
+            </article>
+            
+            <article class="blog-post">
+                <h2><a href="ai-revolution.html">Artificial Intelligence: Reshaping the Future</a></h2>
+                <p>Delve into the revolutionary impact of artificial intelligence on industries worldwide. From machine learning algorithms to neural networks, understand how AI is transforming business processes and creating new opportunities.</p>
+                <div class="blog-meta">Published: AI Innovations • 6 min read</div>
+            </article>
+        </div>
+        
+        <div class="back-link">
+            <a href="../index.html">← Return to nlytix Home</a>
+        </div>
+    </div>
+</body>
+</html>
