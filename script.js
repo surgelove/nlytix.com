@@ -122,7 +122,7 @@ const menuContents = {
     `,
     hectomega: `
         <h2>hectomega</h2>
-        <p>Hectomega is an ambitious trading challenge that proves small investments can yield extraordinary returns through disciplined strategy and compound growth. Starting with just $100, we systematically trade and reinvest all profits with one goal: reaching $1 million. Powered by Aia, our AI powered trading assistante.</p>
+        <p>Hectomega is an ambitious trading challenge that proves small investments can yield extraordinary returns through disciplined strategy and compound growth. Starting with just $100, we systematically trade and reinvest all profits with one goal: reaching $1 million. Powered by Ms. Aia, our AI trading assistante.</p>
         <p><a href="https://hectomega.com" target="_blank">Visit hectomega</a></p>
     `
 };
