@@ -55,6 +55,22 @@ const combinations = [
         mottoColor: '#E5B642',  // Light salmon
         backgroundColor: '#3C88B1',  // Dark orange-brown
         menuColor: '#E58D35'  // Same as frame color
+    },
+    {
+        image: 'nlytix_silvervelvet.png',
+        frameColor: '#605E69',  // Dark purple
+        motto: 'Smooth as Purple Velvet, Sharp as Silver Data',
+        mottoColor: '#C1BFC2',  // Light silver
+        backgroundColor: '#29102C',  // Dark purple
+        menuColor: '#605E69'  // Same as frame color
+    },
+    {
+        image: 'nlytix_broadway.png',
+        frameColor: '#D49334',  // Gold
+        motto: 'The Analytics Revue: Every Dataset Gets Its Moment to Shine',
+        mottoColor: '#E7CC6D',  // Bright gold
+        backgroundColor: '#582E0C',  // Dark brown
+        menuColor: '#D49334'  // Same as frame color
     }
 ];
 
@@ -318,12 +334,9 @@ function updateContent() {
     }, 500);
 }
 
-// Initialize with gold combination on page load
+// Initialize with random combination on page load
 function initializeContent() {
-    const combination = combinations[0]; // Always start with gold (first combination)
-    
-    // Remove the gold combination from the current bag so it won't appear until next refill
-    combinationBag.removeItem(combination);
+    const combination = combinationBag.draw(); // Get a random combination from the bag
     
     // Set initial content without transitions
     imageElement.src = combination.image;
