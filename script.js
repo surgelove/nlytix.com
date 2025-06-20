@@ -3,7 +3,7 @@ const combinations = [
     {
         image: 'nlytix_gold.png',
         frameColor: '#AF833D',  // Gold
-        motto: 'Separating the data gold from the visualization glitter',
+        motto: 'Intelligently separating the data gold from the visualization glitter.',
         mottoColor: '#D1B566',  // Bright gold
         backgroundColor: '#2C1810',  // Dark brown
         menuColor: '#AF833D'  // Same as frame color
@@ -11,7 +11,7 @@ const combinations = [
     {
         image: 'nlytix_flowers.png',
         frameColor: '#47601B',  // Blue
-        motto: 'Chaos becomes beauty when data needs are refined and expertly addressed',
+        motto: 'Chaos becomes beauty when data needs are refined and expertly addressed.',
         mottoColor: '#F3CF46',  // Sky blue
         backgroundColor: '#0F1419',  // Dark blue-gray
         menuColor: '#47601B'  // Same as frame color
@@ -19,7 +19,7 @@ const combinations = [
     {
         image: 'nlytix_jello.png',
         frameColor: '#C63F1F',  // Red
-        motto: 'Engineering teams gel when business data needs thicken and set',
+        motto: 'Engineering teams gel when business data needs thicken and set.',
         mottoColor: '#F3EFEC',  // Light cream
         backgroundColor: '#EC752F',  // Dark orange
         menuColor: '#C63F1F'  // Same as frame color
@@ -27,7 +27,7 @@ const combinations = [
     {
         image: 'nlytix_glass.png',
         frameColor: '#ED8B43',  // Green
-        motto: 'The sun always shines on data',
+        motto: 'The sun always shines on data.',
         mottoColor: '#7CB598',  // Pale green
         backgroundColor: '#0F1A0F',  // Dark green
         menuColor: '#ED8B43'  // Same as frame color
@@ -103,7 +103,7 @@ const menuContents = {
     about: `
         <h2>About nlytix inc.</h2>
         <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights. We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
-        <p><a href="https://linkedin.com/in/nlytix" target="_blank">Visit my LinkedIn profile</a></p>
+        <p><a href="https://linkedin.com/in/nlytix" target="_blank">Visit my LinkedIn profile</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/surgelove" target="_blank">GitHub</a>
     `,
     aia: `
         <div style="display: flex; align-items: flex-start; gap: 20px;">
@@ -231,6 +231,23 @@ function initializeApp() {
         toggleMenu('about');
     });
 
+    // Add document click listener to close menu when clicking elsewhere
+    document.addEventListener('click', function(event) {
+        // Don't close if clicking on menu items, menu content, images, or links
+        if (event.target.closest('.menu-item') || 
+            event.target.closest('.menu-content') || 
+            event.target.tagName === 'IMG' || 
+            event.target.tagName === 'A' ||
+            event.target.closest('a')) {
+            return;
+        }
+        
+        // Close menu if one is currently open
+        if (activeMenu) {
+            closeMenu();
+        }
+    });
+
     // Initialize content
     initializeContent();
 
@@ -256,6 +273,10 @@ function startCountdown() {
         
         if (timeRemaining <= 0) {
             clearInterval(countdownInterval);
+        }
+        
+        if (timeRemaining < 0) {
+            location.reload();
         }
     }, 1000);
 }
