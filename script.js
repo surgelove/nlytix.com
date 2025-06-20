@@ -3,7 +3,7 @@ const combinations = [
     {
         image: 'nlytix_gold.png',
         frameColor: '#AF833D',  // Gold
-        motto: 'Intelligently separating the data gold from the visualization glitter.',
+        motto: 'We intelligently separate the data gold from the visualization glitter.',
         mottoColor: '#D1B566',  // Bright gold
         backgroundColor: '#2C1810',  // Dark brown
         menuColor: '#AF833D'  // Same as frame color
@@ -11,7 +11,7 @@ const combinations = [
     {
         image: 'nlytix_flowers.png',
         frameColor: '#47601B',  // Blue
-        motto: 'Chaos becomes beauty when data needs are refined and expertly addressed.',
+        motto: 'Seed data becomes full bloom insights when your data needs are refined and expertly addressed.',
         mottoColor: '#F3CF46',  // Sky blue
         backgroundColor: '#0F1419',  // Dark blue-gray
         menuColor: '#47601B'  // Same as frame color
@@ -19,7 +19,7 @@ const combinations = [
     {
         image: 'nlytix_jello.png',
         frameColor: '#C63F1F',  // Red
-        motto: 'Engineering teams gel when business data needs thicken and set.',
+        motto: 'We have the perfect analytics recipe: teams that gel, insights that set.',
         mottoColor: '#F3EFEC',  // Light cream
         backgroundColor: '#EC752F',  // Dark orange
         menuColor: '#C63F1F'  // Same as frame color
@@ -27,7 +27,7 @@ const combinations = [
     {
         image: 'nlytix_glass.png',
         frameColor: '#ED8B43',  // Green
-        motto: 'The sun always shines on data.',
+        motto: 'The sun always shines on data: we reveal clear insights that bring your data to life.',
         mottoColor: '#7CB598',  // Pale green
         backgroundColor: '#0F1A0F',  // Dark green
         menuColor: '#ED8B43'  // Same as frame color
@@ -35,7 +35,7 @@ const combinations = [
     {
         image: 'nlytix_wood.png',
         frameColor: '#8B4513',  // dark brown
-        motto: "Woodn't it be nice if data grew on trees? Then we woodn't have to mine for it!",
+        motto: "Like a woodworker's specialized tools, we choose the right analytical methods for your very specific data challenges.",
         mottoColor: '#8B4513',  // brown
         backgroundColor: '#F5F5DC',  // beige-brown
         menuColor: '#8B4513'  // Same as frame color
@@ -43,7 +43,7 @@ const combinations = [
     {
         image: 'nlytix_paint.png',
         frameColor: '#306FC5',  // Orange
-        motto: 'The correlation between finger painting skills and data literacy is still under investigation!',
+        motto: 'Like finger painting, raw data starts chaotic - we help you extract from it something beautiful and meaningful.',
         mottoColor: '#CB3A23',  // Light salmon
         backgroundColor: '#F0C643',  // Dark orange-brown
         menuColor: '#306FC5'  // Same as frame color
@@ -51,7 +51,7 @@ const combinations = [
     {
         image: 'nlytix_daycare.png',
         frameColor: '#E58D35',  // Orange
-        motto: 'Data Science environments are a lot like a daycare, they require constant attention and nurturing to thrive.',
+        motto: 'We take your data through every growth stage - from baby steps to advanced analytics milestones.',
         mottoColor: '#E5B642',  // Light salmon
         backgroundColor: '#3C88B1',  // Dark orange-brown
         menuColor: '#E58D35'  // Same as frame color
@@ -59,7 +59,7 @@ const combinations = [
     {
         image: 'nlytix_silvervelvet.png',
         frameColor: '#605E69',  // Dark purple
-        motto: 'Smooth as Purple Velvet, Sharp as Silver Data',
+        motto: 'We transform your raw data into pure silver insights with a purple velvet touch.',
         mottoColor: '#C1BFC2',  // Light silver
         backgroundColor: '#29102C',  // Dark purple
         menuColor: '#605E69'  // Same as frame color
@@ -67,7 +67,7 @@ const combinations = [
     {
         image: 'nlytix_broadway.png',
         frameColor: '#D49334',  // Gold
-        motto: 'The Analytics Revue: Every Dataset Gets Its Moment to Shine',
+        motto: 'Every dataset has a story - our AI illuminates the insights that deserve a standing ovation.',
         mottoColor: '#E7CC6D',  // Bright gold
         backgroundColor: '#582E0C',  // Dark brown
         menuColor: '#D49334'  // Same as frame color
