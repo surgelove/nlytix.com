@@ -71,6 +71,14 @@ const combinations = [
         mottoColor: '#E7CC6D',  // Bright gold
         backgroundColor: '#582E0C',  // Dark brown
         menuColor: '#D49334'  // Same as frame color
+    },
+    {
+        image: 'nlytix_beach.png',
+        frameColor: '#8C907A',  // Gold
+        motto: 'We sift through vast seashell-like datasets, separating valuable insights from useless debris.',
+        mottoColor: '#CCC5BA',  // Bright gold
+        backgroundColor: '#C7874E',  // Dark brown
+        menuColor: '#8C907A'  // Same as frame color
     }
 ];
 
