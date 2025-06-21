@@ -119,7 +119,7 @@ const menuContents = {
     about: `
         <h2>About nlytix inc.</h2>
         <p>nlytix (pronounced "Analytics") is a data analytics and AI consulting company that transforms complex data into actionable insights. We specialize in helping organizations of all sizes unlock the full potential of their data, whether they're working with massive datasets or focused analytics projects.</p>
-        <p><a href="https://linkedin.com/in/nlytix" target="_blank">Visit my LinkedIn profile</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/surgelove" target="_blank">GitHub</a>
+        <p><a href="mailto:sl@nlytix.com">Email</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/nlytix" target="_blank">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/surgelove" target="_blank">GitHub</a></p>
     `,
     aia: `
         <div style="display: flex; align-items: flex-start; gap: 20px;">
