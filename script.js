@@ -79,6 +79,14 @@ const combinations = [
         mottoColor: '#CCC5BA',  // Bright gold
         backgroundColor: '#C7874E',  // Dark brown
         menuColor: '#8C907A'  // Same as frame color
+    },
+    {
+        image: 'nlytix_circuit.png',
+        frameColor: '#A04574',  // Gold
+        motto: "Our AI transformer model is truly electrifying - it's got all the right connections.",
+        mottoColor: '#6ACAC6',  // Bright gold
+        backgroundColor: '#26454E',  // Dark brown
+        menuColor: '#A04574'  // Same as frame color
     }
 ];
 
