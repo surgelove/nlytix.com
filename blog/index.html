@@ -15,66 +15,339 @@
         .blog-header {
             text-align: center;
             margin-bottom: 50px;
+            position: relative;
+            padding: 40px 0;
+        }
+        
+        .blog-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #64C8FF, #B464FF, #FF9664, transparent);
+            box-shadow: 0 0 20px rgba(100, 200, 255, 0.8);
+            animation: futuristicGlow 3s ease-in-out infinite alternate;
         }
         
         .blog-header h1 {
-            color: #D1B566;
-            font-size: 36px;
-            margin-bottom: 10px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: 'Orbitron', 'Segoe UI', monospace;
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #64C8FF, #B464FF, #FF9664, #64C8FF);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(100, 200, 255, 0.5);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            position: relative;
+        }
+        
+        .blog-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(100, 200, 255, 0.8), transparent);
+            box-shadow: 0 0 10px rgba(100, 200, 255, 0.6);
         }
         
         .blog-header p {
-            color: #ccc;
+            color: rgba(255, 255, 255, 0.8);
             font-size: 18px;
             font-style: italic;
+            font-family: 'Segoe UI', monospace;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 300;
+            margin-top: 20px;
+            position: relative;
+            animation: subtlePulse 2s ease-in-out infinite alternate;
+        }
+        
+        .blog-header p::before {
+            content: '◦';
+            margin-right: 10px;
+            color: #64C8FF;
+            animation: rotate 2s linear infinite;
+        }
+        
+        .blog-header p::after {
+            content: '◦';
+            margin-left: 10px;
+            color: #FF9664;
+            animation: rotate 2s linear infinite reverse;
+        }
+        
+        @keyframes futuristicGlow {
+            0% {
+                box-shadow: 0 0 20px rgba(100, 200, 255, 0.8);
+                filter: hue-rotate(0deg);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(180, 100, 255, 0.8);
+                filter: hue-rotate(120deg);
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(255, 150, 100, 0.8);
+                filter: hue-rotate(240deg);
+            }
+        }
+        
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        @keyframes subtlePulse {
+            0% {
+                opacity: 0.8;
+                text-shadow: 0 0 5px rgba(100, 200, 255, 0.3);
+            }
+            100% {
+                opacity: 1;
+                text-shadow: 0 0 15px rgba(100, 200, 255, 0.6);
+            }
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
         
         .blog-posts {
             display: grid;
-            gap: 30px;
+            gap: 40px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .blog-posts::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #64C8FF, transparent);
+            box-shadow: 0 0 10px rgba(100, 200, 255, 0.6);
+            animation: pulseGlow 2s ease-in-out infinite alternate;
         }
         
         .blog-post {
-            background: rgba(0, 0, 0, 0.6);
-            border: 2px solid #D4AF37;
-            border-radius: 8px;
-            padding: 30px;
-            transition: all 0.3s ease;
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .blog-post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border-radius: 20px;
+            z-index: -1;
+        }
+        
+        .blog-post::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, currentColor, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: 1;
         }
         
         .blog-post:hover {
-            background: rgba(0, 0, 0, 0.8);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .blog-post:hover::after {
+            opacity: 0.8;
+        }
+        
+        /* Data Science Theme - Blue/Teal */
+        .blog-post.theme-data {
+            background: linear-gradient(135deg, rgba(20, 100, 150, 0.3), rgba(10, 50, 100, 0.2));
+            border: 2px solid rgba(100, 200, 255, 0.3);
+        }
+        
+        .blog-post.theme-data:hover {
+            box-shadow: 0 20px 60px rgba(100, 200, 255, 0.3);
+        }
+        
+        .blog-post.theme-data h2 {
+            color: #64C8FF;
+            text-shadow: 0 0 20px rgba(100, 200, 255, 0.5);
+        }
+        
+        /* Analytics Theme - Purple/Violet */
+        .blog-post.theme-analytics {
+            background: linear-gradient(135deg, rgba(120, 50, 150, 0.3), rgba(80, 20, 120, 0.2));
+            border: 2px solid rgba(180, 100, 255, 0.3);
+        }
+        
+        .blog-post.theme-analytics:hover {
+            box-shadow: 0 20px 60px rgba(180, 100, 255, 0.3);
+        }
+        
+        .blog-post.theme-analytics h2 {
+            color: #B464FF;
+            text-shadow: 0 0 20px rgba(180, 100, 255, 0.5);
+        }
+        
+        /* AI Theme - Orange/Red */
+        .blog-post.theme-ai {
+            background: linear-gradient(135deg, rgba(255, 100, 50, 0.3), rgba(200, 50, 20, 0.2));
+            border: 2px solid rgba(255, 150, 100, 0.3);
+        }
+        
+        .blog-post.theme-ai:hover {
+            box-shadow: 0 20px 60px rgba(255, 150, 100, 0.3);
+        }
+        
+        .blog-post.theme-ai h2 {
+            color: #FF9664;
+            text-shadow: 0 0 20px rgba(255, 150, 100, 0.5);
         }
         
         .blog-post h2 {
-            color: #D1B566;
-            font-size: 24px;
-            margin-bottom: 15px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-family: 'Orbitron', 'Segoe UI', monospace;
+            font-weight: 600;
+            letter-spacing: 1px;
+            position: relative;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+        
+        .blog-post h2::before {
+            content: '▶';
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            color: currentColor;
+        }
+        
+        .blog-post:hover h2::before {
+            opacity: 1;
+            left: -20px;
+            animation: pulse 1s ease-in-out infinite alternate;
         }
         
         .blog-post h2 a {
             color: inherit;
             text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
         }
         
         .blog-post h2 a:hover {
-            text-decoration: underline;
+            text-decoration: none;
+            opacity: 0.9;
+            filter: brightness(1.2);
         }
         
         .blog-post p {
-            color: #fff;
-            line-height: 1.6;
-            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+            margin-bottom: 25px;
+            font-size: 16px;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 300;
         }
         
         .blog-meta {
-            color: #999;
-            font-size: 14px;
-            font-style: italic;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-family: 'Segoe UI', monospace;
+            position: relative;
+            padding-left: 15px;
+        }
+        
+        .blog-meta::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 8px;
+            color: currentColor;
+            animation: blink 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 10px rgba(100, 200, 255, 0.6);
+                opacity: 0.8;
+            }
+            100% {
+                box-shadow: 0 0 20px rgba(100, 200, 255, 0.9);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: translateY(-50%) scale(1);
+            }
+            100% {
+                transform: translateY(-50%) scale(1.2);
+            }
+        }
+        
+        @keyframes blink {
+            0%, 50% {
+                opacity: 1;
+            }
+            51%, 100% {
+                opacity: 0.3;
+            }
         }
         
         .back-link {
@@ -94,39 +367,141 @@
         }
         
         .image-gallery {
-            margin-top: 50px;
-            padding-top: 30px;
-            border-top: 2px solid #D4AF37;
+            margin-top: 80px;
+            padding-top: 50px;
+            position: relative;
+        }
+        
+        .image-gallery::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #64C8FF, #B464FF, #FF9664, transparent);
+            box-shadow: 0 0 15px rgba(100, 200, 255, 0.8);
+            animation: futuristicGlow 3s ease-in-out infinite alternate;
         }
         
         .image-gallery h3 {
-            color: #D1B566;
+            color: #B464FF;
             text-align: center;
-            margin-bottom: 20px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-bottom: 40px;
+            font-family: 'Orbitron', 'Segoe UI', monospace;
+            font-size: 32px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            background: linear-gradient(45deg, #64C8FF, #B464FF, #FF9664);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(180, 100, 255, 0.5);
+            position: relative;
+        }
+        
+        .image-gallery h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(180, 100, 255, 0.8), transparent);
+            box-shadow: 0 0 8px rgba(180, 100, 255, 0.6);
         }
         
         .image-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .image-grid::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(100, 200, 255, 0.5), transparent);
+            animation: scanLine 3s linear infinite;
         }
         
         .image-grid img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #D4AF37;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            border: 2px solid rgba(100, 200, 255, 0.3);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .image-grid img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+            z-index: 1;
         }
         
         .image-grid img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+            transform: scale(1.15) translateY(-10px);
+            border-color: rgba(100, 200, 255, 0.8);
+            box-shadow: 0 15px 40px rgba(100, 200, 255, 0.4);
             cursor: pointer;
+        }
+        
+        .image-grid img:hover::before {
+            left: 100%;
+        }
+        
+        .image-grid img:nth-child(even) {
+            border-color: rgba(180, 100, 255, 0.3);
+        }
+        
+        .image-grid img:nth-child(even):hover {
+            border-color: rgba(180, 100, 255, 0.8);
+            box-shadow: 0 15px 40px rgba(180, 100, 255, 0.4);
+        }
+        
+        .image-grid img:nth-child(3n) {
+            border-color: rgba(255, 150, 100, 0.3);
+        }
+        
+        .image-grid img:nth-child(3n):hover {
+            border-color: rgba(255, 150, 100, 0.8);
+            box-shadow: 0 15px 40px rgba(255, 150, 100, 0.4);
+        }
+        
+        @keyframes scanLine {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
         }
         
         .image-modal {
@@ -137,8 +512,10 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            animation: fadeIn 0.3s ease;
+            background: radial-gradient(circle at center, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.98));
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            animation: modalFadeIn 0.4s ease;
         }
         
         .image-modal.show {
@@ -148,28 +525,90 @@
         }
         
         .image-modal img {
-            max-width: 90vw;
-            max-height: 90vh;
+            max-width: 85vw;
+            max-height: 85vh;
             object-fit: contain;
-            border: 3px solid #D4AF37;
-            border-radius: 8px;
-            box-shadow: 0 10px 40px rgba(212, 175, 55, 0.5);
-            animation: zoomIn 0.3s ease;
+            border: 3px solid transparent;
+            border-radius: 15px;
+            box-shadow: 
+                0 0 50px rgba(100, 200, 255, 0.3),
+                0 20px 60px rgba(0, 0, 0, 0.8);
+            animation: modalZoomIn 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative;
+            background: linear-gradient(45deg, rgba(100, 200, 255, 0.1), rgba(180, 100, 255, 0.1), rgba(255, 150, 100, 0.1));
+            padding: 3px;
+        }
+        
+        .image-modal img::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            background: linear-gradient(45deg, #64C8FF, #B464FF, #FF9664);
+            border-radius: 15px;
+            z-index: -1;
+            animation: borderGlow 2s linear infinite;
         }
         
         .image-modal .close {
             position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #D4AF37;
-            font-size: 40px;
-            font-weight: bold;
+            top: 30px;
+            right: 40px;
+            color: #64C8FF;
+            font-size: 48px;
+            font-weight: 300;
             cursor: pointer;
             z-index: 1001;
+            font-family: 'Orbitron', monospace;
+            transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(100, 200, 255, 0.8);
         }
         
         .image-modal .close:hover {
-            color: #fff;
+            color: #B464FF;
+            transform: scale(1.1) rotate(90deg);
+            text-shadow: 0 0 20px rgba(180, 100, 255, 1);
+        }
+        
+        @keyframes modalFadeIn {
+            from { 
+                opacity: 0;
+                backdrop-filter: blur(0px);
+                -webkit-backdrop-filter: blur(0px);
+            }
+            to { 
+                opacity: 1;
+                backdrop-filter: blur(15px);
+                -webkit-backdrop-filter: blur(15px);
+            }
+        }
+        
+        @keyframes modalZoomIn {
+            from { 
+                transform: scale(0.7) rotate(5deg);
+                opacity: 0;
+            }
+            to { 
+                transform: scale(1) rotate(0deg);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes borderGlow {
+            0% {
+                background: linear-gradient(45deg, #64C8FF, #B464FF, #FF9664);
+            }
+            33% {
+                background: linear-gradient(45deg, #B464FF, #FF9664, #64C8FF);
+            }
+            66% {
+                background: linear-gradient(45deg, #FF9664, #64C8FF, #B464FF);
+            }
+            100% {
+                background: linear-gradient(45deg, #64C8FF, #B464FF, #FF9664);
+            }
         }
         
         @keyframes fadeIn {
@@ -192,22 +631,22 @@
         </div>
         
         <div class="blog-posts">
-            <article class="blog-post">
-                <h2><a href="data-fundamentals.html">The Foundation of Modern Data Science</a></h2>
-                <p>Explore the fundamental principles that underpin effective data science practices. From data collection and cleaning to establishing robust data pipelines, learn how to build a solid foundation for all your analytical endeavors.</p>
-                <div class="blog-meta">Published: Data Foundations • 5 min read</div>
+            <article class="blog-post theme-ai">
+                <h2><a href="agentic-misalignment.html">The Hidden Dangers of Agentic Misalignment in AI</a></h2>
+                <p>Based on groundbreaking Anthropic research, discover the seven key dangers from "agentic misalignment" in AI systems - from lethal actions and blackmail to corporate espionage and widespread deception across major AI models.</p>
+                <div class="blog-meta">Published: June 21, 2025 • AI Safety Research • 8 min read</div>
             </article>
             
-            <article class="blog-post">
+            <article class="blog-post theme-analytics">
                 <h2><a href="analytics-insights.html">Transforming Numbers into Business Intelligence</a></h2>
                 <p>Discover how advanced analytics transforms raw data into actionable business insights. Learn about statistical methods, visualization techniques, and interpretation strategies that drive informed decision-making across organizations.</p>
-                <div class="blog-meta">Published: Analytics Deep-dive • 7 min read</div>
+                <div class="blog-meta">Published: May 15, 2025 • Analytics Deep-dive • 7 min read</div>
             </article>
             
-            <article class="blog-post">
+            <article class="blog-post theme-data">
                 <h2><a href="ai-revolution.html">Artificial Intelligence: Reshaping the Future</a></h2>
                 <p>Delve into the revolutionary impact of artificial intelligence on industries worldwide. From machine learning algorithms to neural networks, understand how AI is transforming business processes and creating new opportunities.</p>
-                <div class="blog-meta">Published: AI Innovations • 6 min read</div>
+                <div class="blog-meta">Published: April 8, 2025 • AI Innovations • 6 min read</div>
             </article>
         </div>
         

@@ -11,7 +11,7 @@ const combinations = [
     {
         image: 'nlytix_flowers.png',
         frameColor: '#47601B',  // Blue
-        motto: 'Seed data becomes full bloom insights when your data needs are refined and expertly addressed.',
+        motto: 'Seeds of data becomes full bloom insights when your business intelligence needs are refined and expertly addressed.',
         mottoColor: '#F3CF46',  // Sky blue
         backgroundColor: '#0F1419',  // Dark blue-gray
         menuColor: '#47601B'  // Same as frame color
@@ -27,7 +27,7 @@ const combinations = [
     {
         image: 'nlytix_glass.png',
         frameColor: '#ED8B43',  // Green
-        motto: 'The sun always shines on data: we reveal clear insights that bring your data to life.',
+        motto: 'The sun always shines on data: we reveal clear insights that bring your business objectives to life.',
         mottoColor: '#7CB598',  // Pale green
         backgroundColor: '#0F1A0F',  // Dark green
         menuColor: '#ED8B43'  // Same as frame color
@@ -67,7 +67,7 @@ const combinations = [
     {
         image: 'nlytix_broadway.png',
         frameColor: '#D49334',  // Gold
-        motto: 'Every dataset has a story - our AI illuminates the insights that deserve a standing ovation.',
+        motto: 'Every dataset has a story - our AI applications illuminate the insights that deserve a standing ovation.',
         mottoColor: '#E7CC6D',  // Bright gold
         backgroundColor: '#582E0C',  // Dark brown
         menuColor: '#D49334'  // Same as frame color
@@ -142,7 +142,7 @@ const menuContents = {
         <h2>Blog & Insights</h2>
         <p>Stay updated with the latest trends in data science, analytics, and artificial intelligence through our regularly updated blog.
         Topics cover industry best practices, case studies, and emerging technologies in the data landscape.</p>
-        <p><a href="blog/index.html" target="_blank">Visit our blog</a></p>
+        <p><a href="blog/index.html" target="_blank">Visit Blog</a></p>
     `,
     hectomega: `
         <h2>hectomega</h2>
