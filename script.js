@@ -10,11 +10,11 @@ const combinations = [
     },
     {
         image: 'nlytix_flowers.png',
-        frameColor: '#47601B',  // Blue
-        motto: 'Seeds of data becomes full bloom insights when your business intelligence needs are refined and expertly addressed.',
-        mottoColor: '#F3CF46',  // Sky blue
-        backgroundColor: '#0F1419',  // Dark blue-gray
-        menuColor: '#47601B'  // Same as frame color
+        frameColor: '#CB8E31',  // Blue
+        motto: 'Seeds of data become full bloom insights when your business intelligence needs are refined and expertly addressed.',
+        mottoColor: '#F7E14B',  // Sky blue
+        backgroundColor: '#4A621B',  // Dark blue-gray
+        menuColor: '#CB8E31'  // Same as frame color
     },
     {
         image: 'nlytix_jello.png',
