@@ -24,14 +24,14 @@ const combinations = [
         backgroundColor: '#EC752F',  // Dark orange
         menuColor: '#C63F1F'  // Same as frame color
     },
-    {
-        image: 'nlytix_glass.png',
-        frameColor: '#ED8B43',  // Green
-        motto: 'The sun always shines on data: we reveal clear insights that bring your business objectives to life.',
-        mottoColor: '#7CB598',  // Pale green
-        backgroundColor: '#0F1A0F',  // Dark green
-        menuColor: '#ED8B43'  // Same as frame color
-    },
+    // {
+    //     image: 'nlytix_glass.png',
+    //     frameColor: '#ED8B43',  // Green
+    //     motto: 'The sun always shines on data: we reveal clear insights that bring your business objectives to life.',
+    //     mottoColor: '#7CB598',  // Pale green
+    //     backgroundColor: '#0F1A0F',  // Dark green
+    //     menuColor: '#ED8B43'  // Same as frame color
+    // },
     {
         image: 'nlytix_wood.png',
         frameColor: '#8B4513',  // dark brown
@@ -87,6 +87,14 @@ const combinations = [
         mottoColor: '#6ACAC6',  // Bright gold
         backgroundColor: '#26454E',  // Dark brown
         menuColor: '#A04574'  // Same as frame color
+    },
+    {
+        image: 'nlytix_crochet.png',
+        frameColor: '#5299B9',  // Gold
+        motto: "Knot your average dataset: When your data is all tangled up, we perform yarn-alytics and generate stitch-istics with needle-point precision.",
+        mottoColor: '#F4CD48',  // Bright gold
+        backgroundColor: '#5B4077',  // Dark brown
+        menuColor: '#5299B9'  // Same as frame color
     }
 ];
 
