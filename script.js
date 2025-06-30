@@ -103,6 +103,7 @@ class RandomBag {
     constructor(items) {
         this.originalItems = [...items];
         this.bag = [];
+        this.lastDrawn = null;
         this.refillBag();
     }
 
@@ -113,13 +114,25 @@ class RandomBag {
             const j = Math.floor(Math.random() * (i + 1));
             [this.bag[i], this.bag[j]] = [this.bag[j], this.bag[i]];
         }
+        // Ensure first item is not the same as last drawn
+        if (this.lastDrawn && this.bag.length > 1 && this.bag[this.bag.length - 1] === this.lastDrawn) {
+            // Find a different item to swap with the last
+            for (let i = 0; i < this.bag.length - 1; i++) {
+                if (this.bag[i] !== this.lastDrawn) {
+                    [this.bag[i], this.bag[this.bag.length - 1]] = [this.bag[this.bag.length - 1], this.bag[i]];
+                    break;
+                }
+            }
+        }
     }
 
     draw() {
         if (this.bag.length === 0) {
             this.refillBag();
         }
-        return this.bag.pop();
+        const item = this.bag.pop();
+        this.lastDrawn = item;
+        return item;
     }
 
     // Remove a specific item from the current bag
