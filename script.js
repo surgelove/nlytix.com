@@ -95,6 +95,14 @@ const combinations = [
         mottoColor: '#F4CD48',  // Bright gold
         backgroundColor: '#5B4077',  // Dark brown
         menuColor: '#5299B9'  // Same as frame color
+    },
+    {
+        image: 'nlytix_stained.png',
+        frameColor: '#486C32',  // Gold
+        motto: "From stained glass to pristine data, we bring clarity and beauty to your analytics.",
+        mottoColor: '#234A71',  // Bright gold
+        backgroundColor: '#E3CE99',  // Dark brown
+        menuColor: '#486C32'  // Same as frame color
     }
 ];
 
