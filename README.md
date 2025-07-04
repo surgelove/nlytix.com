@@ -78,6 +78,7 @@ nlytix.com/
 - **Auto-reload failsafe** if countdown goes negative
 - **Visual feedback** with hover states and animations
 - **Smooth transitions** between all interface states
+- **Image preloading** for seamless theme transitions
 
 ## 🛠️ Technical Implementation
 
@@ -101,6 +102,7 @@ nlytix.com/
 - DOM manipulation optimization
 - RandomBag pattern for fair theme distribution
 - Dynamic color management system
+- Image preloading for seamless transitions
 
 ### Theme Configuration
 
@@ -124,6 +126,14 @@ Ensures fair distribution of themes without immediate repetition:
 - Draws themes randomly until bag is empty
 - Refills and reshuffles for next cycle
 - Prevents monotonous patterns
+
+### Image Preloading System
+Optimizes performance and ensures seamless transitions:
+- **Startup preloading**: All theme images loaded during initialization
+- **Predictive caching**: Next theme image preloaded before transition
+- **Memory-efficient**: Images cached in Map for reuse
+- **Error handling**: Graceful fallback if preloading fails
+- **Smooth transitions**: Eliminates loading delays during theme changes
 
 ## 🎨 Visual Themes
 

@@ -171,6 +171,51 @@ class RandomBag {
 // Create bag for combinations
 const combinationBag = new RandomBag(combinations);
 
+// Image preloading functionality
+const preloadedImages = new Map(); // Cache for preloaded images
+let nextCombination = null; // The next combination to be shown
+
+function preloadImage(imageSrc) {
+    return new Promise((resolve, reject) => {
+        // Check if image is already preloaded
+        if (preloadedImages.has(imageSrc)) {
+            resolve(preloadedImages.get(imageSrc));
+            return;
+        }
+        
+        const img = new Image();
+        img.onload = () => {
+            preloadedImages.set(imageSrc, img);
+            resolve(img);
+        };
+        img.onerror = reject;
+        img.src = imageSrc;
+    });
+}
+
+function preloadNextImage() {
+    // Get the next combination without removing it from the bag
+    const tempBag = [...combinationBag.bag];
+    const tempLastDrawn = combinationBag.lastDrawn;
+    
+    // If bag is empty, we need to simulate refill
+    if (tempBag.length === 0) {
+        const tempCombinationBag = new RandomBag(combinations);
+        tempCombinationBag.lastDrawn = tempLastDrawn;
+        tempCombinationBag.refillBag();
+        nextCombination = tempCombinationBag.bag[tempCombinationBag.bag.length - 1];
+    } else {
+        nextCombination = tempBag[tempBag.length - 1];
+    }
+    
+    // Preload the next image
+    if (nextCombination) {
+        preloadImage(nextCombination.image).catch(err => {
+            console.warn('Failed to preload image:', nextCombination.image, err);
+        });
+    }
+}
+
 // DOM elements
 let imageElement, taglineElement, frameElement, containerElement, bodyElement;
 let countdownElement, menuBarElement, menuContentElement, menuTextElement;
@@ -328,12 +373,24 @@ function initializeApp() {
     // Initialize content
     initializeContent();
 
+    // Preload all images for smooth transitions
+    preloadAllImages();
+
     // Start the rotation after initial load
     setTimeout(() => {
         updateContent();
         // Continue updating every 12 seconds
         setInterval(updateContent, 12000);
     }, 12000); // Wait 12 seconds before first change
+}
+
+// Preload all images at startup for optimal performance
+function preloadAllImages() {
+    combinations.forEach(combination => {
+        preloadImage(combination.image).catch(err => {
+            console.warn('Failed to preload image:', combination.image, err);
+        });
+    });
 }
 
 // Countdown functionality
@@ -371,17 +428,30 @@ function updateContent() {
     bodyElement.style.backgroundColor = combination.backgroundColor;
     menuBarElement.style.backgroundColor = combination.menuColor;
 
-    // Update image with slower fade effect
+    // Update image with preloaded image for smooth transition
     imageElement.style.opacity = '0';
     
     setTimeout(() => {
-        imageElement.src = combination.image;
-        // Wait a bit more for the image to load before fading in
-        setTimeout(() => {
-            imageElement.style.opacity = '1';
-            // Start countdown after image appears
-            startCountdown();
-        }, 100);
+        // Use preloaded image if available, otherwise load normally
+        if (preloadedImages.has(combination.image)) {
+            imageElement.src = combination.image;
+            // Image is already loaded, fade in immediately
+            setTimeout(() => {
+                imageElement.style.opacity = '1';
+                // Start countdown after image appears
+                startCountdown();
+            }, 50);
+        } else {
+            // Fallback to normal loading
+            imageElement.src = combination.image;
+            setTimeout(() => {
+                imageElement.style.opacity = '1';
+                startCountdown();
+            }, 100);
+        }
+        
+        // Preload the next image for the following transition
+        preloadNextImage();
     }, 1000); // Increased delay to 1 second
 
     // Update frame colors with delay to sync with image
@@ -407,6 +477,14 @@ function initializeContent() {
     taglineElement.style.color = combination.mottoColor;
     bodyElement.style.backgroundColor = combination.backgroundColor;
     menuBarElement.style.backgroundColor = combination.menuColor;
+    
+    // Preload the current image and the next one
+    preloadImage(combination.image).catch(err => {
+        console.warn('Failed to preload initial image:', combination.image, err);
+    });
+    
+    // Preload the next image for smooth transition
+    preloadNextImage();
     
     // Start initial countdown
     startCountdown();
