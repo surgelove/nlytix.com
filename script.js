@@ -41,42 +41,42 @@ const combinations = [
         menuColor: '#8B4513'  // Same as frame color
     },
     {
-        image: 'nlytix_paint.png',
-        frameColor: '#306FC5',  // Orange
+        image: 'nlytix_fingerpaint.png',
+        frameColor: '#2458B2',  // Colorful blue
         motto: 'Like finger painting, raw data starts chaotic - we help you extract from it something beautiful and meaningful.',
-        mottoColor: '#CB3A23',  // Light salmon
-        backgroundColor: '#F0C643',  // Dark orange-brown
-        menuColor: '#306FC5'  // Same as frame color
+        mottoColor: '#C02C1B',  // colorful red
+        backgroundColor: '#F3BA40',  // colorful yellow
+        menuColor: '#2458B2'  // Same as frame color
     },
     {
         image: 'nlytix_daycare.png',
         frameColor: '#E58D35',  // Orange
         motto: 'We take your data through every growth stage - from baby steps to advanced analytics milestones.',
-        mottoColor: '#E5B642',  // Light salmon
+        mottoColor: '#F5DB59',  // Light salmon
         backgroundColor: '#3C88B1',  // Dark orange-brown
         menuColor: '#E58D35'  // Same as frame color
     },
     {
         image: 'nlytix_silvervelvet.png',
         frameColor: '#605E69',  // Dark purple
-        motto: 'We transform your raw data into pure silver insights with a purple velvet touch.',
+        motto: 'We transform your raw data into pure silver insights with a velvet touch.',
         mottoColor: '#C1BFC2',  // Light silver
         backgroundColor: '#29102C',  // Dark purple
         menuColor: '#605E69'  // Same as frame color
     },
     {
         image: 'nlytix_broadway.png',
-        frameColor: '#D49334',  // Gold
+        frameColor: '#582E0C',  // Gold
         motto: 'Every dataset has a story - our AI applications illuminate the insights that deserve a standing ovation.',
-        mottoColor: '#E7CC6D',  // Bright gold
-        backgroundColor: '#582E0C',  // Dark brown
-        menuColor: '#D49334'  // Same as frame color
+        mottoColor: 'black',  // Bright gold
+        backgroundColor: '#D49334',  // Dark brown
+        menuColor: '#582E0C'  // Same as frame color
     },
     {
         image: 'nlytix_beach.png',
         frameColor: '#8C907A',  // Gold
         motto: 'We sift through vast seashell-like datasets, separating valuable insights from useless debris.',
-        mottoColor: '#D5C8B9',  // Bright gold
+        mottoColor: '#FAF9F6',  // Bright gold
         backgroundColor: '#C7874E',  // Dark brown
         menuColor: '#8C907A'  // Same as frame color
     },
@@ -98,11 +98,27 @@ const combinations = [
     },
     {
         image: 'nlytix_stained.png',
-        frameColor: '#486C32',  // Gold
-        motto: "From stained glass to pristine data, we bring clarity and beauty to your analytics.",
-        mottoColor: '#234A71',  // Bright gold
+        frameColor: '#356A7C',  // Gold
+        motto: "From stained to pristine data, we bring clarity and beauty to your analytics.",
+        mottoColor: '#24492C',  // Bright gold
         backgroundColor: '#E3CE99',  // Dark brown
-        menuColor: '#486C32'  // Same as frame color
+        menuColor: '#356A7C'  // Same as frame color
+    },
+    {
+        image: 'nlytix_cap.png',
+        frameColor: '#1A355B',  // Gold
+        motto: "From rookie data to hall-of-fame insights, our algorithms never strike out on game-changing predictions.",
+        mottoColor: 'white',  // Bright gold
+        backgroundColor: '#6E92B4',  // Dark brown
+        menuColor: '#1A355B'  // Same as frame color
+    },
+    {
+        image: 'nlytix_graffiti.png',
+        frameColor: '#5FB064',  // Gold
+        motto: "Neural networks are our spray cans, algorithms our tags, and every data visualization is a masterpiece thrown up on the wall of insight.",
+        mottoColor: '#111919',  // Bright gold
+        backgroundColor: '#E8713D',  // Dark brown
+        menuColor: '#5FB064'  // Same as frame color
     }
 ];
 
