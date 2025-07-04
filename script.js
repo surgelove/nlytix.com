@@ -21,7 +21,7 @@ const combinations = [
         frameColor: '#C63F1F',  // Red
         motto: 'We have the perfect analytics recipe: teams that gel, insights that set.',
         mottoColor: '#F3EFEC',  // Light cream
-        backgroundColor: '#EC752F',  // Dark orange
+        backgroundColor: '#E37E53',  // Dark orange
         menuColor: '#C63F1F'  // Same as frame color
     },
     // {
@@ -34,11 +34,11 @@ const combinations = [
     // },
     {
         image: 'nlytix_wood.png',
-        frameColor: '#8B4513',  // dark brown
+        frameColor: '#A97246',  // dark brown
         motto: "Like a woodworker's specialized tools, we choose the right analytical methods for your very specific data challenges.",
         mottoColor: '#8B4513',  // brown
         backgroundColor: '#F5F5DC',  // beige-brown
-        menuColor: '#8B4513'  // Same as frame color
+        menuColor: '#A97246'  // Same as frame color
     },
     {
         image: 'nlytix_fingerpaint.png',
@@ -83,7 +83,7 @@ const combinations = [
     {
         image: 'nlytix_circuit.png',
         frameColor: '#A04574',  // Gold
-        motto: "Our AI transformer model is truly electrifying - it's got all the right connections.",
+        motto: "Our AI models are truly electrifying - they've got all the right connections.",
         mottoColor: '#6ACAC6',  // Bright gold
         backgroundColor: '#26454E',  // Dark brown
         menuColor: '#A04574'  // Same as frame color
