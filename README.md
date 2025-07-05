@@ -4,7 +4,7 @@ A sophisticated, interactive website showcasing Nlytix's data analytics and AI s
 
 ## 🌟 Overview
 
-Nlytix.com features a unique rotating display system that cycles through 12 different visual themes, each with its own color scheme, background, motto, and artistic style. The site combines modern web development practices with smooth animations, responsive functionality, and a comprehensive blog section with futuristic design elements.
+Nlytix.com features a unique rotating display system that cycles through 14 different visual themes, each with its own color scheme, background, motto, and artistic style. The site combines modern web development practices with smooth animations, responsive functionality, and a comprehensive blog section with futuristic design elements.
 
 ## 📁 Project Structure
 
@@ -24,7 +24,7 @@ nlytix.com/
 │   ├── agentic-misalignment.html
 │   └── blog_wickedai.png   # Featured blog image
 ├── Aia.png                 # AI assistant branding
-├── nlytix_beach.png        # Theme assets (12 total)
+├── nlytix_beach.png        # Theme assets (16 total)
 ├── nlytix_broadway.png
 ├── nlytix_cap.png
 ├── nlytix_circuit.png
@@ -45,7 +45,7 @@ nlytix.com/
 ## ✨ Key Features
 
 ### 🎨 Dynamic Theme System
-- **12 unique visual themes** that rotate randomly
+- **14 unique visual themes** that rotate randomly
 - **12-second intervals** with countdown timer
 - **Coordinated color palettes** affecting background, menu, and frame colors
 - **Smooth transitions** between themes (2-second background fade)
@@ -140,20 +140,34 @@ Optimizes performance and ensures seamless transitions:
 
 ## 🎨 Visual Themes
 
-| Theme | Accent Color | Visual Style | Motto Theme |
-|-------|-------------|--------------|-------------|
-| **Gold** | `#AF833D` | Premium, elegant | Data refinement |
-| **Flowers** | `#CB8E31` | Natural, organic | Growth & blooming |
-| **Jello** | `#C63F1F` | Playful, dynamic | Team cohesion |
-| **Wood** | `#8B4513` | Warm, grounded | Craftsmanship |
-| **Paint** | `#306FC5` | Creative, artistic | Creative data |
-| **Daycare** | `#E58D35` | Nurturing, caring | Data growth stages |
-| **Silver Velvet** | `#605E69` | Luxurious, smooth | Premium insights |
-| **Broadway** | `#D49334` | Theatrical, dramatic | Data storytelling |
-| **Beach** | `#8C907A` | Coastal, serene | Filtering insights |
-| **Circuit** | `#A04574` | Technical, electric | AI connections |
-| **Crochet** | `#5299B9` | Intricate, handmade | Data pattern analysis |
-| **Glass** | `#4A90E2` | Transparent, clear | Data clarity |
+The website features 14 unique visual themes, each with its own coordinated color palette and custom motto:
+
+| Theme | Image | Frame Color | Motto |
+|-------|-------|-------------|-------|
+| **Gold** | `nlytix_gold.png` | `#AF833D` | "We intelligently separate the data gold from the visualization glitter." |
+| **Flowers** | `nlytix_flowers.png` | `#CB8E31` | "Seeds of data become full bloom insights when your business intelligence needs are refined and expertly addressed." |
+| **Jello** | `nlytix_jello.png` | `#C63F1F` | "We have the perfect analytics recipe: teams that gel, insights that set." |
+| **Wood** | `nlytix_wood.png` | `#A97246` | "Like a woodworker's specialized tools, we choose the right analytical methods for your very specific data challenges." |
+| **Fingerpaint** | `nlytix_fingerpaint.png` | `#2458B2` | "Like finger painting, raw data starts chaotic - we help you extract from it something beautiful and meaningful." |
+| **Daycare** | `nlytix_daycare.png` | `#E58D35` | "We take your data through every growth stage - from baby steps to advanced analytics milestones." |
+| **Silver Velvet** | `nlytix_silvervelvet.png` | `#605E69` | "We transform your raw data into pure silver insights with a velvet touch." |
+| **Broadway** | `nlytix_broadway.png` | `#582E0C` | "Every dataset has a story - our AI applications illuminate the insights that deserve a standing ovation." |
+| **Beach** | `nlytix_beach.png` | `#8C907A` | "We sift through vast seashell-like datasets, separating valuable insights from useless debris." |
+| **Circuit** | `nlytix_circuit.png` | `#A04574` | "Our AI models are truly electrifying - they've got all the right connections." |
+| **Crochet** | `nlytix_crochet.png` | `#5299B9` | "Knot your average dataset: When your data is all tangled up, we perform yarn-alytics and generate stitch-istics with needle-point precision." |
+| **Stained** | `nlytix_stained.png` | `#356A7C` | "From stained to pristine data, we bring clarity and beauty to your analytics." |
+| **Cap** | `nlytix_cap.png` | `#1A355B` | "From rookie data to hall-of-fame insights, our algorithms never strike out on game-changing predictions." |
+| **Graffiti** | `nlytix_graffiti.png` | `#5FB064` | "Neural networks are our spray cans, algorithms our tags, and every data visualization is a masterpiece thrown up on the wall of insight." |
+
+### Additional Theme Assets
+- **Glass** | `nlytix_glass.png` | Available for future use
+- **Paint** | `nlytix_paint.png` | Available for future use
+
+Each theme includes:
+- **Frame Color**: Border color for the main image display
+- **Motto Color**: Text color for the theme-specific tagline
+- **Background Color**: Page background tint
+- **Menu Color**: Navigation menu accent color
 
 ## 📱 Responsive Design
 
