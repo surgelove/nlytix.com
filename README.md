@@ -119,7 +119,7 @@ const combinations = [
         backgroundColor: '#2C1810',
         menuColor: '#AF833D'
     },
-    // ... 11 additional themes including circuit and crochet
+    // Additional themes for flowers, jello, wood, etc.
 ];
 ```
 
