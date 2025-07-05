@@ -15,7 +15,7 @@ nlytix.com/
 ├── script.js               # Core JavaScript functionality
 ├── tools.ipynb             # Image processing utilities
 ├── README.md               # Project documentation
-├── webmaster.md            # Technical documentation
+├── webmaster.md            # Technical notes
 ├── blog/                   # Blog section
 │   ├── index.html          # Blog index with futuristic gallery
 │   ├── data-fundamentals.html
@@ -23,20 +23,23 @@ nlytix.com/
 │   ├── ai-revolution.html
 │   ├── agentic-misalignment.html
 │   └── blog_wickedai.png   # Featured blog image
-└── assets/                 # Visual assets (12 themed images)
-    ├── Aia.png             # AI assistant branding
-    ├── nlytix_beach.png
-    ├── nlytix_broadway.png
-    ├── nlytix_circuit.png
-    ├── nlytix_crochet.png
-    ├── nlytix_daycare.png
-    ├── nlytix_flowers.png
-    ├── nlytix_glass.png
-    ├── nlytix_gold.png
-    ├── nlytix_jello.png
-    ├── nlytix_paint.png
-    ├── nlytix_silvervelvet.png
-    └── nlytix_wood.png
+├── Aia.png                 # AI assistant branding
+├── nlytix_beach.png        # Theme assets (12 total)
+├── nlytix_broadway.png
+├── nlytix_cap.png
+├── nlytix_circuit.png
+├── nlytix_crochet.png
+├── nlytix_daycare.png
+├── nlytix_fingerpaint.png
+├── nlytix_flowers.png
+├── nlytix_glass.png
+├── nlytix_gold.png
+├── nlytix_graffiti.png
+├── nlytix_jello.png
+├── nlytix_paint.png
+├── nlytix_silvervelvet.png
+├── nlytix_stained.png
+└── nlytix_wood.png
 ```
 
 ## ✨ Key Features
@@ -64,7 +67,7 @@ nlytix.com/
 ### 📚 Blog Section
 - **Futuristic design** with glassmorphism effects and animated gradients
 - **Responsive blog index** with 4 featured articles including AI safety content
-- **Complete image gallery** displaying all 12 themed PNG files
+- **Complete image gallery** displaying all 16 themed PNG files
 - **Full-screen modal viewer** with futuristic styling and scanline effects
 - **Themed blog posts** with unique color schemes (AI: orange/red, Analytics: purple, Data: blue)
 - **Featured imagery** with proper aspect ratio handling
@@ -150,6 +153,7 @@ Optimizes performance and ensures seamless transitions:
 | **Beach** | `#8C907A` | Coastal, serene | Filtering insights |
 | **Circuit** | `#A04574` | Technical, electric | AI connections |
 | **Crochet** | `#5299B9` | Intricate, handmade | Data pattern analysis |
+| **Glass** | `#4A90E2` | Transparent, clear | Data clarity |
 
 ## 📱 Responsive Design
 
@@ -167,8 +171,8 @@ Optimizes performance and ensures seamless transitions:
 
 ### Prerequisites
 - Modern web browser with ES6+ support
-- Local web server (for proper CORS handling)
-- All image assets in project root
+- Local web server (recommended for optimal functionality)
+- All image assets in project root directory
 
 ### Quick Start
 ```bash
@@ -177,11 +181,6 @@ git clone [repository-url]
 cd nlytix.com
 
 # Start local server (choose one)
-# Clone repository
-git clone <repository-url>
-cd nlytix.com
-
-# Start local server
 python -m http.server 8000        # Python
 npx http-server                   # Node.js
 php -S localhost:8000             # PHP
@@ -194,9 +193,6 @@ php -S localhost:8000             # PHP
 2. Test on multiple screen sizes
 3. Verify all external links are functional
 4. Check image gallery modal functionality
-
-### Testing Locally
-The site can be accessed at: `file:///Users/code/source/nlytix.com/index.html`
 
 ## 🎯 Customization Guide
 
@@ -219,11 +215,6 @@ The site can be accessed at: `file:///Users/code/source/nlytix.com/index.html`
 - **Display duration**: Change `12000` in `setInterval()` calls
 - **Transition speed**: Adjust `2s` in CSS transition properties
 - **Countdown timer**: Modify `timeRemaining = 10` in script
-
-### Content Updates
-- **Menu content**: Edit `menuContents` object in `script.js`
-- **Blog posts**: Add new HTML files in `/blog/` directory
-- **Company information**: Update About section content
 
 ## 📊 Performance Features
 
@@ -294,105 +285,6 @@ The blog section features content covering:
 - **Project**: [hectomega.com](https://hectomega.com)
 
 ---
-
-**Built with ❤️ for modern web experiences**
-
-### Adding New Themes
-1. Add PNG image to root directory
-2. Update `combinations` array in `script.js`
-3. Add image to blog gallery if desired
-4. Test color coordination
-
-### Modifying Behavior
-- **Rotation timing**: Change `setInterval` value (default: 12000ms)
-- **Countdown duration**: Modify `timeRemaining` (default: 10 seconds)
-- **Transition speed**: Adjust CSS `transition` properties
-
-### Content Updates
-- **Menu content**: Edit `menuContents` object in `script.js`
-- **Blog posts**: Modify individual HTML files in `/blog/`
-- **External links**: Update URLs in menu content
-
-## �️ Image Processing
-
-### Tools.ipynb Features
-- **Batch PNG processing** with quality preservation
-- **Aspect ratio maintenance** during resizing
-- **Configurable output dimensions**
-- **Folder-based batch operations**
-- **Advanced resampling options**
-
-### Usage Example
-```python
-# Configure paths and run processing
-input_folder = "original_images"
-output_folder = "processed_images"
-target_height = 400
-# Process all images maintaining aspect ratios
-```
-
-## � Blog System
-
-### Features
-- **Article index** with preview cards
-- **Full-screen image viewer** for gallery
-- **Responsive image grid** (100px thumbnails)
-- **Modal navigation** with keyboard support
-- **Consistent branding** with main site
-
-### Content Structure
-- **Data Fundamentals**: Foundation concepts
-- **Analytics Insights**: Business intelligence focus
-- **AI Revolution**: Artificial intelligence trends
-
-## 🔗 External Integrations
-
-- **LinkedIn Profile**: Direct professional networking link
-- **GitHub Repository**: Source code access
-- **Hectomega Platform**: Trading challenge site
-- **Social Media**: Expandable for future platforms
-
-## 📊 Performance Optimizations
-
-### Loading Strategy
-- **Optimized image assets** for web delivery
-- **Efficient DOM caching** to minimize queries
-- **Hardware-accelerated CSS** animations
-- **Lazy loading considerations** for future expansion
-
-### Browser Compatibility
-- **Modern browsers**: Full feature support
-- **Progressive enhancement**: Graceful degradation
-- **Touch device optimization**: Mobile-first approach
-- **Accessibility features**: Keyboard navigation support
-
-## 🐛 Troubleshooting
-
-### Common Issues
-- **Images not loading**: Check file paths and CORS policy
-- **Menu not opening**: Verify JavaScript is enabled
-- **Animations not smooth**: Check browser hardware acceleration
-- **Mobile layout issues**: Test viewport meta tag
-
-### Debug Features
-- **Console logging**: Available for development
-- **Auto-reload failsafe**: Prevents countdown errors
-- **Error handling**: Graceful degradation patterns
-
-## � Future Enhancements
-
-### Planned Features
-- **Dynamic image loading** from directory scanning
-- **Theme customization** user interface
-- **Blog CMS integration** for easier content management
-- **Analytics tracking** for user engagement
-- **SEO optimizations** for better discoverability
-
-### Technical Improvements
-- **Service worker** for offline functionality
-- **Image optimization** with WebP format support
-- **Component-based architecture** for better maintainability
-- **Automated testing** suite implementation
 
 ## 📝 License & Credits
 
