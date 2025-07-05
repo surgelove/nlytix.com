@@ -115,7 +115,7 @@ const combinations = [
     {
         image: 'nlytix_earth.png',
         frameColor: '#877B67',
-        motto: "Neural networks are our spray cans, algorithms our tags, and every data visualization is a masterpiece thrown up on the wall of insight.",
+        motto: "Data that's out of this world, insights that are down to earth.",
         mottoColor: '#FDFDFD',
         backgroundColor: '#35629F',
         menuColor: '#877B67'
