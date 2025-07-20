@@ -4,7 +4,7 @@ A sophisticated, interactive website showcasing Nlytix's data analytics and AI s
 
 ## 🌟 Overview
 
-Nlytix.com features a unique rotating display system that cycles through 14 different visual themes, each with its own color scheme, background, motto, and artistic style. The site combines modern web development practices with smooth animations, responsive functionality, and a comprehensive blog section with futuristic design elements.
+Nlytix.com features a unique rotating display system that cycles through 15 different visual themes, each with its own color scheme, background, motto, and artistic style. The site combines modern web development practices with smooth animations, responsive functionality, and a comprehensive blog section with futuristic design elements.
 
 ## 📁 Project Structure
 
@@ -24,12 +24,13 @@ nlytix.com/
 │   ├── agentic-misalignment.html
 │   └── blog_wickedai.png   # Featured blog image
 ├── Aia.png                 # AI assistant branding
-├── nlytix_beach.png        # Theme assets (16 total)
+├── nlytix_beach.png        # Theme assets (17 total)
 ├── nlytix_broadway.png
 ├── nlytix_cap.png
 ├── nlytix_circuit.png
 ├── nlytix_crochet.png
 ├── nlytix_daycare.png
+├── nlytix_earth.png
 ├── nlytix_fingerpaint.png
 ├── nlytix_flowers.png
 ├── nlytix_glass.png
@@ -45,7 +46,7 @@ nlytix.com/
 ## ✨ Key Features
 
 ### 🎨 Dynamic Theme System
-- **14 unique visual themes** that rotate randomly
+- **15 unique visual themes** that rotate randomly
 - **12-second intervals** with countdown timer
 - **Coordinated color palettes** affecting background, menu, and frame colors
 - **Smooth transitions** between themes (2-second background fade)
@@ -67,7 +68,7 @@ nlytix.com/
 ### 📚 Blog Section
 - **Futuristic design** with glassmorphism effects and animated gradients
 - **Responsive blog index** with 4 featured articles including AI safety content
-- **Complete image gallery** displaying all 16 themed PNG files
+- **Complete image gallery** displaying all 17 themed PNG files
 - **Full-screen modal viewer** with futuristic styling and scanline effects
 - **Themed blog posts** with unique color schemes (AI: orange/red, Analytics: purple, Data: blue)
 - **Featured imagery** with proper aspect ratio handling
@@ -140,7 +141,7 @@ Optimizes performance and ensures seamless transitions:
 
 ## 🎨 Visual Themes
 
-The website features 14 unique visual themes, each with its own coordinated color palette and custom motto:
+The website features 15 unique visual themes, each with its own coordinated color palette and custom motto:
 
 | Theme | Image | Frame Color | Motto |
 |-------|-------|-------------|-------|
@@ -158,6 +159,7 @@ The website features 14 unique visual themes, each with its own coordinated colo
 | **Stained** | `nlytix_stained.png` | `#356A7C` | "From stained to pristine data, we bring clarity and beauty to your analytics." |
 | **Cap** | `nlytix_cap.png` | `#1A355B` | "From rookie data to hall-of-fame insights, our algorithms never strike out on game-changing predictions." |
 | **Graffiti** | `nlytix_graffiti.png` | `#5FB064` | "Neural networks are our spray cans, algorithms our tags, and every data visualization is a masterpiece thrown up on the wall of insight." |
+| **Earth** | `nlytix_earth.png` | `#877B67` | "Data that's out of this world, insights that are down to earth." |
 
 ### Additional Theme Assets
 - **Glass** | `nlytix_glass.png` | Available for future use
